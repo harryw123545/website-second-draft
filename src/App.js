@@ -1,7 +1,8 @@
 import { Box, makeStyles, Typography, ThemeProvider} from '@material-ui/core'
 import { createMuiTheme } from '@material-ui/core/styles'
 import Codex from './fonts/Codex-Regular.otf';
-import { purple } from '@material-ui/core/colors'
+import CssBaseline from "@material-ui/core/CssBaseline";
+// import { purple, green } from '@material-ui/core/colors'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Portfolio from './portfolio'
 import Bio from './bio'
@@ -73,10 +74,13 @@ const theme = createMuiTheme({
     },
   },
   palette: {
-    primary: {
-      main: '#fefefe'
+    background: {
+      default: "#111812"
     },
-    secondary: purple
+    // text: {
+    //   primary: green,
+    //   secondary: purple
+    // }
   },
   zIndex: {
     mobileStepper: 1000,
@@ -89,12 +93,14 @@ const theme = createMuiTheme({
   }
 });
 
+
+
 function App() {
   
   const classes = useStyles()
   return (
     <ThemeProvider theme={theme}>
-
+      <CssBaseline />
     <Box>
       <Router>
         <Box className={classes.container}>
