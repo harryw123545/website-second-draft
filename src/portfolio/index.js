@@ -1,4 +1,6 @@
 import { Button, Box, makeStyles, Typography, ThemeProvider } from '@material-ui/core'
+import theme from '../theme'
+
 
 const useStyles = makeStyles({
     container:{
@@ -18,18 +20,25 @@ function Portfolio () {
     const classes = useStyles()
 
     return (
-        <ThemeProvider>
+        <ThemeProvider theme={theme}>
         <Box className={classes.container}>
+            <Typography 
+                variant="h1" 
+                component="h1"
+                color="primary"
+            >
+                Heading, testing testing
+            </Typography>
             <Typography 
                 variant="h2" 
                 component="h2"
                 color="primary"
             >
-                Heading, testing testing
+                Hey, hows it going?
             </Typography>
             <Box>
                 <Button
-                    color="secondary"
+                    color="primary"
                 > 
                     Hey, its a button 
                 </Button>

@@ -1,8 +1,7 @@
 import { Box, makeStyles, Typography, ThemeProvider} from '@material-ui/core'
-import { createMuiTheme } from '@material-ui/core/styles'
-import Codex from './fonts/Codex-Regular.otf';
+
+import theme from './theme'
 import CssBaseline from "@material-ui/core/CssBaseline";
-// import { purple, green } from '@material-ui/core/colors'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Portfolio from './portfolio'
 import Bio from './bio'
@@ -38,60 +37,6 @@ const useStyles = makeStyles({
   },
 })
 
-const codex = {
-  fontFamily: 'Codex',
-  fontStyle: 'normal',
-  fontDisplay: 'swap',
-  fontWeight: 600,
-  src: `
-    local('Codex'),
-    local('Codex-Regular'),
-    url(${Codex}) format('otf')
-  `,
-  unicodeRange:
-    'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF',
-};
-
-const theme = createMuiTheme({
-  typography: {
-    fontFamily: 'codex',
-    overrides: {
-      MuiCssBaseline: {
-        '@global': {
-          '@font-face': [codex],
-        },
-      },
-    },
-    subtitle1: {
-      fontSize: 42,
-      fontStyle: 'bold',
-    },
-    body1: {
-      fontWeight: 500,
-    },
-    button: {
-      fontStyle: 'italic',
-    },
-  },
-  palette: {
-    background: {
-      default: "#111812"
-    },
-    // text: {
-    //   primary: green,
-    //   secondary: purple
-    // }
-  },
-  zIndex: {
-    mobileStepper: 1000,
-    speedDial: 1050,
-    appBar: 1100,
-    drawer: 1200,
-    modal: 1300,
-    snackbar: 1400,
-    tooltip: 1500,
-  }
-});
 
 
 
@@ -101,13 +46,18 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      
     <Box>
       <Router>
         <Box className={classes.container}>
           {tabNames.map(({ text, link }) => {
             return (
               <Box className={classes.headerElement}>
-                <Typography variant="subtitle1">
+                <Typography 
+                  variant="h2" 
+                  component="h2"
+                  color="primary"
+                >
                   <Link to={link}>{text}</Link>
                 </Typography>
               </Box>
@@ -127,6 +77,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+
       </Box>
     </ThemeProvider>
 
