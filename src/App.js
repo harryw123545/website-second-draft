@@ -1,7 +1,7 @@
 import { Box, makeStyles, Typography, ThemeProvider} from '@material-ui/core'
 import { createMuiTheme } from '@material-ui/core/styles'
-import red from '@material-ui/core/colors/purple'
 import Codex from './fonts/Codex-Regular.otf';
+import { purple } from '@material-ui/core/colors'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Portfolio from './portfolio'
 import Bio from './bio'
@@ -29,7 +29,6 @@ const useStyles = makeStyles({
   },
   headerElement: {
     marginLeft: 20,
-    fontSize: 40,
     display: 'flex',
     flex: 1,
     justifyContent: 'center',
@@ -55,10 +54,16 @@ const codex = {
 const theme = createMuiTheme({
   typography: {
     fontFamily: 'codex',
+    overrides: {
+      MuiCssBaseline: {
+        '@global': {
+          '@font-face': [codex],
+        },
+      },
+    },
     subtitle1: {
-      fontSize: 52,
+      fontSize: 42,
       fontStyle: 'bold',
-      color: red,
     },
     body1: {
       fontWeight: 500,
@@ -69,17 +74,18 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      // light: will be calculated from palette.primary.main,
-      main: '#33FF52',
-      // dark: will be calculated from palette.primary.main,
-      // contrastText: will be calculated to contrast with palette.primary.main
+      main: '#fefefe'
     },
-    secondary: {
-      light: '#0066ff',
-      main: '#0044ff',
-      // dark: will be calculated from palette.secondary.main,
-      contrastText: '#ffcc00',
-    }
+    secondary: purple
+  },
+  zIndex: {
+    mobileStepper: 1000,
+    speedDial: 1050,
+    appBar: 1100,
+    drawer: 1200,
+    modal: 1300,
+    snackbar: 1400,
+    tooltip: 1500,
   }
 });
 
@@ -87,37 +93,37 @@ function App() {
   
   const classes = useStyles()
   return (
- 
-    
-  <Box>
-    <Router>
-      <Box className={classes.container}>
-        {tabNames.map(({ text, link }) => {
-          return (
-            <Box className={classes.headerElement}>
-              <ThemeProvider theme={theme}>
-              <Typography variant="subtitle1" color="primary">
-                <Link to={link}>{text}</Link>
-              </Typography>
-              </ThemeProvider>
-            </Box>
-          )
-    })}
-  </Box>
+    <ThemeProvider theme={theme}>
 
-      <Switch>
-        <Route path="/portfolio">
-          <Portfolio />
-        </Route>
-        <Route path="/bio">
-          <Bio />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-      </Switch>
-    </Router>
+    <Box>
+      <Router>
+        <Box className={classes.container}>
+          {tabNames.map(({ text, link }) => {
+            return (
+              <Box className={classes.headerElement}>
+                <Typography variant="subtitle1">
+                  <Link to={link}>{text}</Link>
+                </Typography>
+              </Box>
+            )
+      })}
     </Box>
+
+        <Switch>
+          <Route path="/portfolio">
+            <Portfolio />
+          </Route>
+          <Route path="/bio">
+            <Bio />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+        </Switch>
+      </Router>
+      </Box>
+    </ThemeProvider>
+
   )
 }
 
