@@ -7,11 +7,12 @@ const bioSketch = (p) => {
     
         p.angleMode(p.DEGREES);
         p.rectMode(p.CENTER);
-        p.background(0);
+       
       }
   
       p.draw = () => {
   
+        p.background(0, 20);
         let time = p.frameCount;
         let iter = p.map(p.mouseX, 0, p.width, 0, 3);
         let col = p.map(p.mouseY, 0, p.height, 0.02, 3.5);
