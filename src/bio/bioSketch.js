@@ -14,8 +14,8 @@ const bioSketch = (p) => {
   
         p.background(0, 20);
         let time = p.frameCount;
-        let iter = p.map(p.mouseX, 0, p.width, 0, 3);
-        let col = p.map(p.mouseY, 0, p.height, 0.02, 3.5);
+        let iter = p.map(p.accelerationX, -90, 90, 0, 3);
+        let col = p.map(p.accelerationY, -90, 90, 0.02, 3.5);
         
         p.translate(p.width/2, p.height/2);
         
