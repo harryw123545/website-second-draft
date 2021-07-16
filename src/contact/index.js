@@ -1,6 +1,6 @@
 import { Box, makeStyles } from '@material-ui/core'
 import p5 from 'p5'
-import { useEffect } from 'react'
+import { useRef } from 'react'
 import Sketch from './sketch'
 
 
@@ -22,7 +22,7 @@ const useStyles = makeStyles({
 function Contact () {
     const classes = useStyles()
 
-    useEffect(() => {
+    useRef(() => {
       new p5(Sketch)
     }, [])
 
