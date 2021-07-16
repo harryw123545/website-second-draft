@@ -6,12 +6,16 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Portfolio from './portfolio'
 import Bio from './bio'
 import Contact from './contact'
+import Test from './test'
+
 
 const tabNames = [
   { text: 'wakeling', link: '' }, 
   { text: 'portfolio', link: '/portfolio' }, 
   { text: 'bio', link: '/bio' }, 
-  { text: 'contact', link: '/contact' }
+  { text: 'contact', link: '/contact' },
+  { text: 'test', link: '/test' }
+
 ]
 
 const useStyles = makeStyles({
@@ -54,8 +58,8 @@ function App() {
             return (
               <Box className={classes.headerElement}>
                 <Typography 
-                  variant="h2" 
-                  component="h2"
+                  variant="h3" 
+                  component="h3"
                   color="primary"
                 >
                   <Link to={link}>{text}</Link>
@@ -74,6 +78,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route path="/test">
+            <Test />
           </Route>
         </Switch>
       </Router>

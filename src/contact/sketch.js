@@ -1,6 +1,8 @@
+
 const sketch = (p) => {
 
   const canvas = document.getElementById('canvas-container')
+
 
     p.setup = () => {
       p.createCanvas(canvas.offsetWidth, canvas.offsetHeight)
