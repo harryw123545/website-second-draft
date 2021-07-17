@@ -29,6 +29,7 @@ const useStyles = makeStyles({
     height: 100,
     margin: 0,
     padding: 0,
+    zIndex: 1
 
   },
   headerElement: {

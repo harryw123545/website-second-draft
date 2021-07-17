@@ -1,5 +1,5 @@
 
-const sketch = (p) => {
+const Sketch = (p) => {
 
   const canvas = document.getElementById('canvas-container')
 
@@ -29,5 +29,5 @@ const sketch = (p) => {
     }
 }
 
-export default sketch
+export default Sketch
 
