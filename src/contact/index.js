@@ -22,10 +22,13 @@ const useStyles = makeStyles({
 
 function Contact () {
     const classes = useStyles()
-    const ref = useRef(p5)
+    const ref = useRef()
 
     useEffect(() => {
       ref.current = new p5(Sketch)
+      return function() {
+        ref.current = null
+      }
     }, [ref])
 
     

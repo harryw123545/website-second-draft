@@ -57,7 +57,7 @@ function App() {
         <Box className={classes.container}>
           {tabNames.map(({ text, link }) => {
             return (
-              <Box className={classes.headerElement}>
+              <Box className={classes.headerElement} key={text} >
                 <Typography 
                   variant="h3" 
                   component="h3"

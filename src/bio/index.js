@@ -22,10 +22,15 @@ const useStyles = makeStyles({
 
   function Bio () {
     const classes = useStyles()
-    const ref = useRef(p5)
+    const ref = useRef()
 
     useEffect(() => {
-      ref.current = new p5(bioSketch)
+      const{sketch, kill} = bioSketch()
+      ref.current = new p5(sketch)
+      return function() {
+        ref.current = null
+        kill()
+      }
     }, [ref])
 
     
