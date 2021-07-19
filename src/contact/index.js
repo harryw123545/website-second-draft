@@ -19,17 +19,29 @@ const useStyles = makeStyles({
     },
   })
 
-
-function Contact () {
+  function Contact () {
     const classes = useStyles()
     const ref = useRef()
 
     useEffect(() => {
-      ref.current = new p5(Sketch)
+      const{sketch, kill} = Sketch()
+      ref.current = new p5(sketch)
       return function() {
         ref.current = null
+        kill()
       }
     }, [ref])
+
+// function Contact () {
+//     const classes = useStyles()
+//     const ref = useRef()
+
+//     useEffect(() => {
+//       ref.current = new p5(Sketch)
+//       return function() {
+//         ref.current = null
+//       }
+//     }, [ref])
 
     
 

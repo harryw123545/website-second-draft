@@ -3,6 +3,16 @@ const Sketch = (p) => {
 
   const canvas = document.getElementById('canvas-container')
 
+  let p5
+  
+  const kill = () => {
+    console.log("KILL")
+    p5.remove()
+  }
+
+  const sketch = (p) => {
+    p5 = p
+   const canvas = document.getElementById('canvas-container')
 
     p.setup = () => {
       let c = p.createCanvas(canvas.offsetWidth, canvas.offsetHeight)
@@ -31,6 +41,10 @@ const Sketch = (p) => {
     p.windowResized = () => {
       p.resizeCanvas(canvas.offsetWidth, canvas.offsetHeight)
     }
+}
+
+return{sketch, kill}
+
 }
 
 export default Sketch
