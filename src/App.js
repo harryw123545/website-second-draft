@@ -76,10 +76,7 @@ function App() {
             <Portfolio />
           </Route>
           <Route path="/bio">
-          <React.StrictMode>
             <Bio />
-            </React.StrictMode>,
-            document.getElementById('root')
           </Route>
           <Route path="/contact">
             <Contact />

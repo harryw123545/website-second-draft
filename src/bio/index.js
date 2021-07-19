@@ -1,7 +1,10 @@
-import { Box, makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 import p5 from 'p5'
-import { useEffect } from 'react'
+import { Box, useEffect } from 'react'
 import bioSketch from './bioSketch'
+import React from 'react';
+
+
 
 
 const useStyles = makeStyles({
@@ -19,15 +22,17 @@ const useStyles = makeStyles({
 
 function Bio () {
     const classes = useStyles()
+    const elementRef = React.useRef()
 
     useEffect(() => {
-      new p5(bioSketch)
+      new p5(bioSketch, elementRef.current)
     }, [])
 
     
 
-    return <Box className={classes.container} id='canvas-container' />
+    return <Box className={classes.container} id='canvas-container'  />
         
+ 
 }
 
 export default Bio

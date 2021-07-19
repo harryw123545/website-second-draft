@@ -35,7 +35,7 @@ const bioSketch = (p) => {
   
       p.windowResized = () => {
         p.resizeCanvas(canvas.offsetWidth, canvas.offsetHeight)
-        p.background(0);
+        p.background(0, 20);
       }
   }
   
