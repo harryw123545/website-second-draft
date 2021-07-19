@@ -3,8 +3,12 @@ const bioSketch = (p) => {
     const canvas = document.getElementById('canvas-container')
   
       p.setup = () => {
-        p.createCanvas(canvas.offsetWidth, canvas.offsetHeight)
-    
+        let c = p.createCanvas(canvas.offsetWidth, canvas.offsetHeight);
+        // This was missing from your code, so that may have been causing problems.
+        // An alternative to setting the canvas parent this way is to pass the
+        // parent to the p5 constructor.
+        c.parent(canvas);
+
         p.angleMode(p.DEGREES);
         p.rectMode(p.CENTER);
        
@@ -14,8 +18,8 @@ const bioSketch = (p) => {
   
         p.background(0, 20);
         let time = p.frameCount;
-        let iter = p.map(p.accelerationX, -90, 90, 0, 3);
-        let col = p.map(p.accelerationY, -90, 90, 0.02, 3.5);
+        let iter = p.map(p.mouseX, 0, p.width, 0, 3);
+        let col = p.map(p.mouseY, 0, p.height, 0.02, 3.5);
         
         p.translate(p.width/2, p.height/2);
         
