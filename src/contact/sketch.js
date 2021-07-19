@@ -1,5 +1,5 @@
 
-const Sketch = (p5) => {
+const Sketch = () => {
 
   let p5
   
