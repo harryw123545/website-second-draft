@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Portfolio from './portfolio'
 import Bio from './bio'
 import Contact from './contact'
-import Test from './test'
+import Type from './type'
 
 
 const tabNames = [
@@ -14,7 +14,7 @@ const tabNames = [
   { text: 'portfolio', link: '/portfolio' }, 
   { text: 'bio', link: '/bio' }, 
   { text: 'contact', link: '/contact' },
-  { text: 'test', link: '/test' }
+  { text: 'type', link: '/type' }
 
 ]
 
@@ -80,8 +80,8 @@ function App() {
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route path="/test">
-            <Test />
+          <Route path="/type">
+            <Type />
           </Route>
         </Switch>
       </Router>
