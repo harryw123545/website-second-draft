@@ -1,8 +1,6 @@
 
 const Sketch = (p) => {
 
-  const canvas = document.getElementById('canvas-container')
-
   let p5
   
   const kill = () => {
