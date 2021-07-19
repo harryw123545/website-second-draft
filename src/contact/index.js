@@ -1,7 +1,9 @@
-import { Box, makeStyles } from '@material-ui/core'
+import { Box, makeStyles, Button, Typography, ThemeProvider } from '@material-ui/core'
 import p5 from 'p5'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import Sketch from './sketch'
+import theme from '../theme'
+
 
 
 const useStyles = makeStyles({
@@ -20,14 +22,20 @@ const useStyles = makeStyles({
 
 function Contact () {
     const classes = useStyles()
+    const ref = useRef(p5)
 
     useEffect(() => {
-      new p5(Sketch)
-    }, [])
+      ref.current = new p5(Sketch)
+    }, [ref])
 
     
 
-    return <Box className={classes.container} id='canvas-container' />
+    return <ThemeProvider theme={theme}>
+     
+      <Box className={classes.container} id='canvas-container' >
+          
+      </Box>
+    </ThemeProvider>
         
 }
 

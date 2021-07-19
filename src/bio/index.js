@@ -1,6 +1,6 @@
 import { Box, makeStyles } from '@material-ui/core'
 import p5 from 'p5'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import bioSketch from './bioSketch'
 
 
@@ -22,10 +22,11 @@ const useStyles = makeStyles({
 
   function Bio () {
     const classes = useStyles()
+    const ref = useRef(p5)
 
     useEffect(() => {
-      new p5(bioSketch)
-    }, [])
+      ref.current = new p5(bioSketch)
+    }, [ref])
 
     
 
