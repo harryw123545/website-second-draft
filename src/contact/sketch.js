@@ -5,11 +5,7 @@ const Sketch = (p) => {
 
 
     p.setup = () => {
-      let c = p.createCanvas(canvas.offsetWidth, canvas.offsetHeight);
-        // This was missing from your code, so that may have been causing problems.
-        // An alternative to setting the canvas parent this way is to pass the
-        // parent to the p5 constructor.
-        c.parent(canvas);
+      p.createCanvas(canvas.offsetWidth, canvas.offsetHeight)
     }
 
     p.draw = () => {
