@@ -1,4 +1,4 @@
-import { Box, makeStyles, Button, Typography, ThemeProvider } from '@material-ui/core'
+import { Box, makeStyles, ThemeProvider } from '@material-ui/core'
 import p5 from 'p5'
 import { useEffect, useRef } from 'react'
 import Sketch from './sketch'
