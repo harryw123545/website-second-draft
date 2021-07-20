@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import WebFont from 'webfontloader';
 
 ReactDOM.render(
   <React.StrictMode>
