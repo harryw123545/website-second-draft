@@ -22,10 +22,16 @@ WebFontConfig = {
     // urls: [codex]
   }
 };
+
+WebFont.load({
+  custom: {
+    families: ['codexregular']
+  }
+});
   
   const theme = createMuiTheme({
     typography: {
-      fontFamily: 'codex',
+      fontFamily: 'codexregular',
       overrides: {
         MuiCssBaseline: {
           '@global': {
