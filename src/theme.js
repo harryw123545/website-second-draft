@@ -8,8 +8,8 @@ const codex = {
     fontweight: 'normal',
     fontstyle: 'normal',
     src: `
-      url('codex-regular.woff') format('woff'),
-      url('codex-regular.woff2') format('woff2')
+      url(${Codex}) format('woff'),
+      url(${Codex2}) format('woff2')
     `
    };
   
