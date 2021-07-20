@@ -1,6 +1,8 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import Codex from './fonts/codex-regular.woff'
 import Codex2 from './fonts/codex-regular.woff2'
+import WebFontConfig from 'gatsby-plugin-web-font-loader'
+
 
 
 const codex = {
@@ -12,6 +14,14 @@ const codex = {
       url(${Codex2}) format('woff2')
     `
    };
+
+   
+WebFontConfig = {
+  custom: {
+    families: ['codexregular']
+    // urls: [codex]
+  }
+};
   
   const theme = createMuiTheme({
     typography: {
