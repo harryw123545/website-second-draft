@@ -1,7 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles'
-import Codex from './fonts/codex-regular.woff'
-import Codex2 from './fonts/codex-regular.woff2'
-import webfontloader from 'gatsby-plugin-web-font-loader'
+// import Codex from './public/fonts/codex-regular.woff'
+// import Codex2 from './fonts/codex-regular.woff2'
+// import webfontloader from 'gatsby-plugin-web-font-loader'
 
 
 
@@ -10,12 +10,12 @@ const codex = {
     fontweight: 'normal',
     fontstyle: 'normal',
     src: `
-      url(${Codex}) format('woff'),
-      url(${Codex2}) format('woff2')
+      url('/fonts/codex-regular.woff') format('woff'),
+      url('/fonts/codex-regular.woff2') format('woff2')
     `,
    };
 
-   var WebFont = require(webfontloader);
+  //  var WebFont = require(webfontloader);
    
 // WebFontConfig = {
 //   custom: {
@@ -24,12 +24,11 @@ const codex = {
 //   }
 // };
 
-WebFont.load({
-  custom: {
-    families: ['codexregular'],
-    urls: [`${Codex}`]
-  }
-});
+// WebFont.load({
+//   custom: {
+//     families: ['codexregular'],
+//   }
+// });
   
   const theme = createMuiTheme({
     typography: {
