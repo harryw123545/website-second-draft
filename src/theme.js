@@ -6,10 +6,11 @@ import { createMuiTheme } from '@material-ui/core/styles'
 
 
 const codex = {
-    fontFamily: 'codexregular',
+    fontFamily: 'Codex',
     fontweight: 'normal',
     fontstyle: 'normal',
     src: `
+      local('codex-regular'),
       url('/fonts/codex-regular.woff') format('woff'),
       url('/fonts/codex-regular.woff2') format('woff2')
     `,
@@ -32,7 +33,7 @@ const codex = {
   
   const theme = createMuiTheme({
     typography: {
-      fontFamily: 'codexregular',
+      fontFamily: 'Codex',
       overrides: {
         MuiCssBaseline: {
           '@global': {
