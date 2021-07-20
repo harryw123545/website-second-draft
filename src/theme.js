@@ -1,7 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import Codex from './fonts/codex-regular.woff'
 import Codex2 from './fonts/codex-regular.woff2'
-import WebFontConfig from 'gatsby-plugin-web-font-loader'
+import webfontloader from 'gatsby-plugin-web-font-loader'
 
 
 
@@ -12,20 +12,22 @@ const codex = {
     src: `
       url(${Codex}) format('woff'),
       url(${Codex2}) format('woff2')
-    `
+    `,
    };
 
+   var WebFont = require(webfontloader);
    
-WebFontConfig = {
-  custom: {
-    families: ['codexregular']
-    // urls: [codex]
-  }
-};
+// WebFontConfig = {
+//   custom: {
+//     families: ['codexregular']
+//     // urls: [codex]
+//   }
+// };
 
 WebFont.load({
   custom: {
-    families: ['codexregular']
+    families: ['codexregular'],
+    urls: [`${Codex}`]
   }
 });
   
