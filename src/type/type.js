@@ -57,12 +57,14 @@ const typeSketch = () => {
 
     p5.drawAMohr = (i, j) => {
 
-      let time = p5.frameCount*0.013;
-      let iter = p5.map(p5.mouseX, 0, p5.width, 0.001, 0.1)
+      let iter = p5.map(p5.mouseX, 0, p5.width, 0.001, 0.19)
+      let iter2 = p5.map(p5.mouseY, 0, p5.height, 0.3, 0.01)
+
+      let time = p5.frameCount*iter2;
     
       
       p5.beginShape()
-      for (let k = 0; k < 10; k++) {
+      for (let k = 0; k < 8; k++) {
         p5.fill(127 + 127 * p5.sin(k * iter + time), 127 + 127 * p5.sin(k * iter*0.3 + time), 127 + 127 * p5.sin(k * 0.001 + time), 90)
         p5.noStroke()
         p5.curveVertex(p5.noise( k * j, i + f) * spc  - spc/2, p5.noise( i, j *k + f ) * spc - spc/2)
