@@ -74,13 +74,6 @@ const typeSketch = () => {
       p5.endShape()
   }
 
-  p5.keyPressed = () => {
-    if (p5.keyCode === p5.LEFT_ARROW) {
-      grid += 1;
-    } else if (p5.keyCode === p5.RIGHT_ARROW) {
-      grid -= 1;
-    }
-  }
 
 
   p5.windowResized = () => {
