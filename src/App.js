@@ -9,6 +9,7 @@ import Contact from './contact'
 import Type from './type'
 
 
+
 const tabNames = [
   { text: 'wakeling', link: '' }, 
   { text: 'portfolio', link: '/portfolio' }, 
@@ -53,6 +54,7 @@ function App() {
       <CssBaseline />
       
     <Box>
+      
       <Router>
         <Box className={classes.container}>
           {tabNames.map(({ text, link }) => {
@@ -90,6 +92,7 @@ function App() {
         </Switch>
       </Router>
 
+      
       </Box>
     </ThemeProvider>
 

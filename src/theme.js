@@ -56,7 +56,7 @@ const codex = {
         // Name of the rule
         text: {
           // Some CSS
-          background: 'linear-gradient(45deg, #FE6B8B 30%, #FF1E53 90%)',
+          background: 'linear-gradient(45deg, #FE6B8B 20%, #a2ff00 70%)',
           borderRadius: 23,
           border: 0,
           color: 'white',
