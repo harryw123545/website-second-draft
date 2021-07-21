@@ -1,8 +1,8 @@
-import { Box, makeStyles, Typography, ThemeProvider} from '@material-ui/core'
+import { Box, makeStyles, Typography, ThemeProvider, Button} from '@material-ui/core'
 
 import theme from './theme'
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import Portfolio from './portfolio'
 import Bio from './bio'
 import Contact from './contact'
@@ -58,13 +58,17 @@ function App() {
           {tabNames.map(({ text, link }) => {
             return (
               <Box className={classes.headerElement} key={text} >
+                <Button
+                  color="secondary"
+                >
                 <Typography 
-                  variant="h3" 
-                  component="h3"
+                  variant="h4" 
+                  component="h4"
                   color="primary"
                 >
                   <Link to={link}>{text}</Link>
                 </Typography>
+                </Button>
               </Box>
             )
       })}

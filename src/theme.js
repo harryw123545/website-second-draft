@@ -1,8 +1,4 @@
 import { createMuiTheme } from '@material-ui/core/styles'
-// import Codex from './public/fonts/codex-regular.woff'
-// import Codex2 from './fonts/codex-regular.woff2'
-// import webfontloader from 'gatsby-plugin-web-font-loader'
-
 
 
 const codex = {
@@ -16,20 +12,7 @@ const codex = {
     `,
    };
 
-  //  var WebFont = require(webfontloader);
-   
-// WebFontConfig = {
-//   custom: {
-//     families: ['codexregular']
-//     // urls: [codex]
-//   }
-// };
 
-// WebFont.load({
-//   custom: {
-//     families: ['codexregular'],
-//   }
-// });
   
   const theme = createMuiTheme({
     typography: {
@@ -48,9 +31,7 @@ const codex = {
       body1: {
         fontWeight: 500,
       },
-      button: {
-        fontStyle: 'italic',
-      },
+     
     },
     palette: {
       background: {
@@ -64,11 +45,28 @@ const codex = {
         },
         secondary: {
           light: '#ff7961',
-          main: '#f44336',
+          main: '#FFFFFF',
           dark: '#ba000d',
           contrastText: '#000',
         },
     },
+    overrides: {
+      // Style sheet name ⚛️
+      MuiButton: {
+        // Name of the rule
+        text: {
+          // Some CSS
+          background: 'linear-gradient(45deg, #FE6B8B 30%, #FF1E53 90%)',
+          borderRadius: 23,
+          border: 0,
+          color: 'white',
+          height: 48,
+          padding: '0 30px',
+          boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+        },
+      },
+    },
+    
   });
 
   export default theme
