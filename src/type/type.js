@@ -14,7 +14,6 @@ const typeSketch = () => {
     let f = 0.0
     let spc
     let numIters
-    let grid = 2
 
     p5.setup = () => {
       let c = p5.createCanvas(canvas.offsetWidth, canvas.offsetHeight)
