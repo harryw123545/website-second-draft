@@ -34,7 +34,6 @@ const typeSketch = () => {
 
     p5.draw = () => {
   
-      //p5.background(0, 7)
 
       for (let i = 0; i < numIters; i++) {
         for (let j = 0 ; j < numIters; j++) {
@@ -61,14 +60,11 @@ const typeSketch = () => {
       let time = p5.frameCount*0.013;
       let iter = p5.map(p5.mouseX, 0, p5.width, 0.001, 0.1)
     
-      // p5.stroke(127 + 127 * p5.sin(i * 0.1 + time), 127 + 127 * p5.sin(i * 0.01 + time), 127 + 127 * p5.sin(i * 0.001 + time))
       
       p5.beginShape()
-      for (let k = 0; k < 26; k++) {
-        //p5.stroke(127 + 127 * p5.sin(k * iter+0.2 + time), 127 + 127 * p5.sin(k * iter+0.1 + time), 127 + 127 * p5.sin(k * iter + time))
-        p5.fill(127 + 127 * p5.sin(k * iter + time), 127 + 127 * p5.sin(k * iter*0.3 + time), 127 + 127 * p5.sin(k * 0.001 + time))
+      for (let k = 0; k < 10; k++) {
+        p5.fill(127 + 127 * p5.sin(k * iter + time), 127 + 127 * p5.sin(k * iter*0.3 + time), 127 + 127 * p5.sin(k * 0.001 + time), 90)
         p5.noStroke()
-        //p5.noFill()
         p5.curveVertex(p5.noise( k * j, i + f) * spc  - spc/2, p5.noise( i, j *k + f ) * spc - spc/2)
       }
       p5.endShape()
