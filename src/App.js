@@ -1,4 +1,4 @@
-import { Box, makeStyles, Typography, ThemeProvider, Button} from '@material-ui/core'
+import { Box, makeStyles, ThemeProvider, Button} from '@material-ui/core'
 
 import theme from './theme'
 import CssBaseline from "@material-ui/core/CssBaseline";
