@@ -7,6 +7,7 @@ import Portfolio from './portfolio'
 import Bio from './bio'
 import Contact from './contact'
 import Type from './type'
+import React from 'react'
 
 
 
