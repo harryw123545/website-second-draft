@@ -1,4 +1,4 @@
-import { Box, makeStyles, ThemeProvider, Button} from '@material-ui/core'
+import { Box, makeStyles, Typography, ThemeProvider, Button} from '@material-ui/core'
 
 import theme from './theme'
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -66,12 +66,12 @@ function App() {
                 <Button 
                   color="secondary"
                 >
-                <h4
+                <h3
                   color="primary"
                   class='codex'
                 >
                   <Link to={link}>{text}</Link>
-                  </h4>
+                  </h3>
                 </Button>
                 </div>
               </Box>

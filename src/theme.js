@@ -19,24 +19,24 @@ import { createMuiTheme } from '@material-ui/core/styles'
 
   
   const theme = createMuiTheme({
-    // typography: {
-    //   fontFamily: 'Codex',
-    //   overrides: {
-    //     MuiCssBaseline: {
-    //       '@global': {
-    //         '@font-face': [codex],
-    //       },
-    //     },
-    //   },
-    //   subtitle1: {
-    //     fontSize: 42,
-    //     fontStyle: 'bold',
-    //   },
-    //   body1: {
-    //     fontWeight: 500,
-    //   },
+    typography: {
+      // fontFamily: 'Codex',
+      // // overrides: {
+      // //   MuiCssBaseline: {
+      // //     '@global': {
+      // //       '@font-face': [codex],
+      // //     },
+      // //   },
+      // },
+      subtitle1: {
+        fontSize: 42,
+        fontStyle: 'bold',
+      },
+      body1: {
+        fontWeight: 500,
+      },
      
-    // },
+    },
     palette: {
       background: {
         default: "#111812"
