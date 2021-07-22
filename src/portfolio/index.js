@@ -24,16 +24,12 @@ function Portfolio () {
         <Box className={classes.container}>
             <div class='codex'>
             <h1
-                // variant="h1" 
-                // component="h1"
                 color="primary"
             >
                 Heading, testing testing
             </h1>
-            </div>
+            
             <h2
-                // variant="h2" 
-                // component="h2"
                 color="primary"
             >
                 Hey, hows it going test test test?
@@ -42,10 +38,15 @@ function Portfolio () {
                 <Button
                     color="primary"
                 > 
+                    <h4
+                    class='codex'
+                    >
                     Hey, its a button 
+                    </h4>
                 </Button>
             </Box>
-
+           
+            </div>
         </Box>
         </ThemeProvider>
     )

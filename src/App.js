@@ -62,17 +62,18 @@ function App() {
           {tabNames.map(({ text, link }) => {
             return (
               <Box className={classes.headerElement} key={text} >
-                <Button
+                <div class='codex'>
+                <Button 
                   color="secondary"
                 >
-                <h3
-                  variant="h4" 
-                  component="h4"
+                <h4
                   color="primary"
+                  class='codex'
                 >
                   <Link to={link}>{text}</Link>
-                  </h3>
+                  </h4>
                 </Button>
+                </div>
               </Box>
             )
       })}
