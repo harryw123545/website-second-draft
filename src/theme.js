@@ -4,7 +4,7 @@ import Codex2 from './fonts/codex-regular.woff2';
 
 
 const codex = {
-    fontFamily: 'Codex',
+    fontFamily: "Codex",
     fontweight: 'normal',
     fontstyle: 'normal',
     src: `
