@@ -1,4 +1,4 @@
-import { Box, makeStyles, Typography, ThemeProvider, Button} from '@material-ui/core'
+import { Box, makeStyles, ThemeProvider, Button} from '@material-ui/core'
 
 import theme from './theme'
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -8,7 +8,8 @@ import Bio from './bio'
 import Contact from './contact'
 import Type from './type'
 import React from 'react'
-
+import './css/main.css'
+import './css/fonts/stylesheet.css'
 
 
 const tabNames = [
@@ -64,13 +65,13 @@ function App() {
                 <Button
                   color="secondary"
                 >
-                <Typography 
+                <h3
                   variant="h4" 
                   component="h4"
                   color="primary"
                 >
                   <Link to={link}>{text}</Link>
-                </Typography>
+                  </h3>
                 </Button>
               </Box>
             )
