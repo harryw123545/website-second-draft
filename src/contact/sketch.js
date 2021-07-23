@@ -22,9 +22,9 @@ const Sketch = () => {
 
     p5.draw = () => {
 
-      p5.background(0);
+      p5.background(0)
   
-      let time = p5.frameCount*0.013;
+      let time = p5.frameCount*0.013
       let iter = p5.map(p5.mouseY, 0, p5.height, 0, 0.08)
       let iter2 = p5.map(p5.mouseX, 0, p5.width, 0, 0.02)
       
