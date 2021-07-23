@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import Portfolio from './portfolio'
 import Bio from './bio'
 import Contact from './contact'
+import Home from './home'
 import Type from './type'
 import React from 'react'
 import './css/main.css'
@@ -13,7 +14,7 @@ import './css/fonts/stylesheet.css'
 
 
 const tabNames = [
-  { text: 'wakeling', link: '' }, 
+  { text: 'home', link: '/home' }, 
   { text: 'portfolio', link: '/portfolio' }, 
   { text: 'bio', link: '/bio' }, 
   { text: 'contact', link: '/contact' },
@@ -36,7 +37,7 @@ const useStyles = makeStyles({
 
   },
   headerElement: {
-    marginLeft: 20,
+    marginLeft: 0,
     display: 'flex',
     flex: 1,
     justifyContent: 'center',
@@ -71,7 +72,7 @@ function App() {
                   class='codex'
                 >
                   <Link to={link}>{text}</Link>
-                  </h3>
+                </h3>
                 </Button>
                 </div>
               </Box>
@@ -80,6 +81,9 @@ function App() {
     </Box>
 
         <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
           <Route path="/portfolio">
             <Portfolio />
           </Route>
@@ -94,7 +98,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-
       
       </Box>
     </ThemeProvider>

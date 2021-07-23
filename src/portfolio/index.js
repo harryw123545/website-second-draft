@@ -1,6 +1,5 @@
-import { Button, Box, makeStyles, ThemeProvider } from '@material-ui/core'
+import { Button, Box, makeStyles, ThemeProvider} from '@material-ui/core'
 import theme from '../theme'
-
 
 const useStyles = makeStyles({
     container:{
@@ -38,11 +37,11 @@ function Portfolio () {
                 <Button
                     color="primary"
                 > 
-                    <h4
+                    <p1
                     class='codex'
                     >
                     Hey, its a button 
-                    </h4>
+                    </p1>
                 </Button>
             </Box>
            

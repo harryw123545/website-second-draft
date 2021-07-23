@@ -1,6 +1,19 @@
 .codex {
     font-family: 'codexregular';
-    font-size: 38px;
+    /* font-size: 38px; */
     color: white;
+}
+
+
+h1 {
+    font-size: 78px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 28px;
 }
 
