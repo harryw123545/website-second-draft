@@ -68,7 +68,7 @@ const typeSketch = () => {
         p5.fill(127 + 127 * p5.sin(k * iter + time), 127 + 127 * p5.sin(k * iter*0.3 + time), 127 + 127 * p5.sin(k * 0.001 + time), 90)
         p5.noStroke()
         p5.curveVertex(p5.noise( k * j, i + f) * spc  - spc/2, p5.noise( i, j *k + f ) * spc - spc/2)
-        p5.vertex(p5.noise( k * j, i + f), p5.noise( i, j *k + f ))
+        //p5.vertex(p5.noise( k * j, i + f), p5.noise( i, j *k + f ))
       }
       p5.endShape()
   }
