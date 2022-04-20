@@ -6,6 +6,7 @@ import theme from '../theme'
 
 
 
+
 const useStyles = makeStyles({
     container:{
       position: 'absolute',
@@ -32,24 +33,34 @@ const useStyles = makeStyles({
       }
     }, [ref])
 
-// function Contact () {
-//     const classes = useStyles()
-//     const ref = useRef()
-
-//     useEffect(() => {
-//       ref.current = new p5(Sketch)
-//       return function() {
-//         ref.current = null
-//       }
-//     }, [ref])
-
     
 
     return <ThemeProvider theme={theme}>
      
       <Box className={classes.container} id='canvas-container' >
-          
+
       </Box>
+
+
+      <Box className={classes.container}>
+            <div class='codex'>
+            <h1
+                color="primary"
+            >
+                Heading, testing testing
+            </h1>
+            
+            <h2
+                color="primary"
+            >
+                Hey, hows it going test test test?
+            </h2>
+            
+           
+            </div>
+        </Box>
+
+      
     </ThemeProvider>
         
 }

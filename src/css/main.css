@@ -5,15 +5,23 @@
 }
 
 
-h1 {
-    font-size: 78px;
+h3 {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: "6rem";
+  line-height: 1.167;
+  letter-spacing: "-0.01562em";
 }
 
 h2 {
-    font-size: 48px;
+    font-family: 'Arial';
+  font-weight: 400;
+  font-size: "6rem";
+  line-height: 1.167;
+  letter-spacing: "-0.01562em";
 }
 
-h3 {
+/* h3 {
     font-size: 28px;
-}
+} */
 

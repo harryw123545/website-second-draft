@@ -7,10 +7,10 @@ import Portfolio from './portfolio'
 import Bio from './bio'
 import Contact from './contact'
 import Home from './home'
-import Type from './type'
+// import Type from './type'
 import React from 'react'
 import './css/main.css'
-import './css/fonts/stylesheet.css'
+//import './css/fonts/stylesheet.css'
 
 
 const tabNames = [
@@ -18,9 +18,10 @@ const tabNames = [
   { text: 'portfolio', link: '/portfolio' }, 
   { text: 'bio', link: '/bio' }, 
   { text: 'contact', link: '/contact' },
-  { text: 'type', link: '/type' }
+  // { text: 'type', link: '/type' }
 
 ]
+
 
 const useStyles = makeStyles({
   container:{
@@ -49,6 +50,8 @@ const useStyles = makeStyles({
 
 
 
+
+
 function App() {
   
   const classes = useStyles()
@@ -67,12 +70,9 @@ function App() {
                 <Button 
                   color="secondary"
                 >
-                <h3
-                  color="primary"
-                  class='codex'
-                >
+                  <h2>
                   <Link to={link}>{text}</Link>
-                </h3>
+                  </h2>
                 </Button>
                 </div>
               </Box>
@@ -93,9 +93,9 @@ function App() {
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route path="/type">
+          {/* <Route path="/type">
             <Type />
-          </Route>
+          </Route> */}
         </Switch>
       </Router>
       
